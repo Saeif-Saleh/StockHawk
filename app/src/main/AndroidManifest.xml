@@ -42,7 +42,7 @@
         <receiver android:name=".widget.CollectionWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.udacity.stockhawk.app.ACTION_DATA_UPDATED"/>
+                <action android:name="com.udacity.stockhawk.app.ACTION_DATA_UPDATED" />
             </intent-filter>
 
             <meta-data
@@ -50,8 +50,11 @@
                 android:resource="@xml/collection_widget_info" />
         </receiver>
 
-        <service android:name=".widget.WidgetService"
+        <service
+            android:name=".widget.WidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <activity android:name=".ui.DetailedActivity" android:parentActivityName=".ui.MainActivity"></activity>
     </application>
 
 </manifest>
